@@ -10,8 +10,12 @@ application {
     mainClass = "hexlet.code.App"
 }
 
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
+}
+
 //compileJava {
-//    options.release = 20
+//    options.release = 21
 //}
 
 repositories {
