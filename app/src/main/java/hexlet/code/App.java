@@ -1,7 +1,6 @@
 package hexlet.code;
-//import hexlet.code.games.Calc;
-//import hexlet.code.games.Even;
-
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
@@ -16,12 +15,12 @@ public class App {
         System.out.println(messageChoice);
 
         if (usersChoice == 1) {
-            Cli.getHello();}
-//        } else if (usersChoice == 2) {
-//            Even.getGame();
-//        }
-//        else if (usersChoice == 3) {
-////        Calc.getGame();
-//        }
+            Cli.getHello();
+        } else if (usersChoice == 2) {
+            Even.getGame();
+        }
+        else if (usersChoice == 3) {
+            Calc.getGame();
+        }
     }
 }
