@@ -17,3 +17,6 @@
 [WIN](https://asciinema.org/a/la2Ykhogy6fC4Hj6neFqsQGvC)
 [LOSE](https://asciinema.org/a/ehdRPYYFNRJbdlSONlpRXT7Mg)
 
+### Asciinema Prime
+[WIN](https://asciinema.org/a/g8V1HwC6PkOs7eidpmtHmMSJJ)
+[LOSE](https://asciinema.org/a/nn6xw8yw6sOR5IkgbGlXY6JXa)
