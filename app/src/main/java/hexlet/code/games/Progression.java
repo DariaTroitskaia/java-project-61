@@ -6,7 +6,6 @@ public class Progression {
     public static void getGame() {
         var rules = "What number is missing in the progression?\n";
 
-
         String[] progression = new String[10];
         String[][] gameArray = new String[3][2];
         for (int i = 0; i < gameArray.length; i++) {
@@ -23,6 +22,7 @@ public class Progression {
                 }
                 progressionToString = progressionToString + " " + progression[j];
             }
+
             gameArray[i][0] = progressionToString;
             gameArray[i][1] = String.valueOf(Integer.parseInt(progression[0]) + a * index);
         }
