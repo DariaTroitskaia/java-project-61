@@ -20,18 +20,25 @@ public class App {
         var messageChoice = "Your choice: " + usersChoice;
         System.out.println(messageChoice);
 
-        if (usersChoice == 1) {
-            Cli.getHello();
-        } else if (usersChoice == 2) {
-            Even.getGame();
-        } else if (usersChoice == 3) {
-            Calc.getGame();
-        } else if (usersChoice == 4) {
-            GCD.getGame();
-        } else if (usersChoice == 5) {
-            Progression.getGame();
-        } else if (usersChoice == 6) {
-            Prime.getGame();
+        switch (usersChoice) {
+            case 1:
+                Cli.getHello();
+                break;
+            case 2:
+                Even.getGame();
+                break;
+            case 3:
+                Calc.getGame();
+                break;
+            case 4:
+                GCD.getGame();
+                break;
+            case 5:
+                Progression.getGame();
+                break;
+            case 6:
+                Prime.getGame();
+                break;
         }
     }
 }
