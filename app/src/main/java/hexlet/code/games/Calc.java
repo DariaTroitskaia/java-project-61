@@ -11,7 +11,7 @@ public class Calc {
         }
         Engine.getGame(rules, gameArray);
     }
-    public static String[] generateRoundData(){
+    public static String[] generateRoundData() {
         int maxRandom = 20;
         int number1 = (int) (1 + Math.random() * maxRandom);
         int number2 = (int) (1 + Math.random() * maxRandom);
@@ -23,7 +23,7 @@ public class Calc {
         roundData[1] = calculation(number1, number2, operators[index]);
         return roundData;
     }
-    public static String calculation(int number1, int number2, char operator){
+    public static String calculation(int number1, int number2, char operator) {
         switch (operator) {
             case '+':
                 return String.valueOf(number1 + number2);

@@ -12,7 +12,7 @@ public class Prime {
         }
         Engine.getGame(rules, gameArray);
     }
-    public static String[] generateRoundData(){
+    public static String[] generateRoundData() {
         int maxRandom = 100;
         int number = (int) (1 + Math.random() * maxRandom);
         String[] roundData = new String[2];
@@ -20,7 +20,7 @@ public class Prime {
         roundData[1] = correctAnswer(number);
         return roundData;
     }
-    public static String correctAnswer(int number){
+    public static String correctAnswer(int number) {
         boolean isPrime = number >= 2;
         for (int j = 2; j <= Math.sqrt(number); j++) {
             if (number % j == 0) {

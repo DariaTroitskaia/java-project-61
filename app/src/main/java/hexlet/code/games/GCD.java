@@ -11,7 +11,7 @@ public class GCD {
         }
         Engine.getGame(rules, gameArray);
     }
-    public static String[] generateRoundData(){
+    public static String[] generateRoundData() {
         int maxRandom = 100;
         int number1 = (int) (1 + Math.random() * maxRandom);
         int number2 = (int) (1 + Math.random() * maxRandom);
@@ -20,7 +20,7 @@ public class GCD {
         roundData[1] = correctAnswer(number1, number2);
         return roundData;
     }
-    public static String correctAnswer(int number1, int number2){
+    public static String correctAnswer(int number1, int number2) {
         while (number1 > 0 && number2 > 0) {
             if (number1 > number2) {
                 number1 = number1 % number2;

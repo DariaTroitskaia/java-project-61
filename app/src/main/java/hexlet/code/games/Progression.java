@@ -11,7 +11,7 @@ public class Progression {
         }
         Engine.getGame(rules, gameArray);
     }
-    public static String[] generateRoundData(){
+    public static String[] generateRoundData() {
         int sizeOfProgression = 10;
         String[] progression = new String[sizeOfProgression];
         int maxRandom1 = 100;

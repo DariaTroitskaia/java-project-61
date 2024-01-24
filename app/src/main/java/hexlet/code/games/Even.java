@@ -11,7 +11,7 @@ public class Even {
         }
        Engine.getGame(rules, gameArray);
     }
-    public static String[] generateRoundData(){
+    public static String[] generateRoundData() {
         int maxRandom = 100;
         int number = (int) (1 + Math.random() * maxRandom);
         String[] roundData = new String[2];
@@ -19,7 +19,7 @@ public class Even {
         roundData[1] = isEven(number);
         return roundData;
     }
-    public static String isEven(int number){
+    public static String isEven(int number) {
         return number % 2 == 0 ? "yes" : "no";
     }
 }
