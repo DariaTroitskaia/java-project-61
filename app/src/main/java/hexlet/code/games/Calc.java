@@ -4,16 +4,17 @@ import hexlet.code.Engine;
 public class Calc {
     public static void getGame() {
         var rules = "What is the result of the expression?";
-        String [][] gameArray = new String[3][2];
+        int countRounds = 3;
+        String[][] gameArray = new String[countRounds][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
         Engine.getGame(rules, gameArray);
     }
-
     public static String[] generateRoundData(){
-        int number1 = (int) (1 + Math.random() * 20);
-        int number2 = (int) (1 + Math.random() * 20);
+        int maxRandom = 20;
+        int number1 = (int) (1 + Math.random() * maxRandom);
+        int number2 = (int) (1 + Math.random() * maxRandom);
         int index = (int) (Math.random() * 2);
 
         char[] operators = new char[] {'+', '-', '*'};
@@ -22,7 +23,6 @@ public class Calc {
         roundData[1] = calculation(number1, number2, operators[index]);
         return roundData;
     }
-
     public static String calculation(int number1, int number2, char operator){
         switch (operator) {
             case '+':

@@ -19,10 +19,10 @@ public class Engine {
             if (correctAnswer[1].equalsIgnoreCase(usersAnswer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + usersAnswer + "'" +
-                        " is wrong answer ;(. Correct answer was" + "'" + correctAnswer[1] +
-                        "'.\n" +
-                        "Let's try again, " + userName + "!");
+                System.out.println("'" + usersAnswer + "'"
+                        + " is wrong answer ;(. Correct answer was" + "'" + correctAnswer[1]
+                        + "'.\n"
+                        + "Let's try again, " + userName + "!");
                 return;
             }
         }
