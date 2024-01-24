@@ -1,12 +1,14 @@
 package hexlet.code;
 
+import hexlet.code.games.Greet;
 import java.util.Scanner;
 
 public class Engine {
     public static void getGame(String rules, String[][] gameArray) {
-        Cli.getHello();
-
-        System.out.println("Welcome to the Brain Games!");
+        System.out.println("Welcome to the Brain Games!\n"
+                + "May I have your name?");
+        var userName = Cli.getName();
+        System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
 
         var countWins = 0;
@@ -25,12 +27,12 @@ public class Engine {
                 System.out.println("'" + usersAnswer + "'" +
                         " is wrong answer ;(. Correct answer was" + "'" + gameArray[i][1] +
                         "'.\n" +
-                        "Let's try again, " + hexlet.code.Cli.userName + "!");
+                        "Let's try again, " + userName + "!");
                 i = 3;
             }
         }
         if (countWins == 3) {
-            System.out.println("Congratulations, " + hexlet.code.Cli.userName + "!");
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }

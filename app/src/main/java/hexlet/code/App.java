@@ -1,4 +1,5 @@
 package hexlet.code;
+import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
@@ -22,7 +23,7 @@ public class App {
 
         switch (usersChoice) {
             case 1:
-                Cli.getHello();
+                Greet.sayHello();
                 break;
             case 2:
                 Even.getGame();
