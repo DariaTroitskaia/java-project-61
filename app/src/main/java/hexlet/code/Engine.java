@@ -1,6 +1,4 @@
 package hexlet.code;
-
-import hexlet.code.games.Greet;
 import java.util.Scanner;
 
 public class Engine {
@@ -11,28 +9,24 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
 
-        var countWins = 0;
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Question: " + gameArray[i][0]);
+        for (String[] correctAnswer:gameArray) {
+            System.out.println("Question: " + correctAnswer[0]);
             System.out.print("Your answer: ");
 
             Scanner in = new Scanner(System.in);
             var usersAnswer = in.nextLine();
 
-            if (gameArray[i][1].equalsIgnoreCase(usersAnswer)) {
+            if (correctAnswer[1].equalsIgnoreCase(usersAnswer)) {
                 System.out.println("Correct!");
-                countWins ++;
             } else {
                 System.out.println("'" + usersAnswer + "'" +
-                        " is wrong answer ;(. Correct answer was" + "'" + gameArray[i][1] +
+                        " is wrong answer ;(. Correct answer was" + "'" + correctAnswer[1] +
                         "'.\n" +
                         "Let's try again, " + userName + "!");
-                i = 3;
+                return;
             }
         }
-        if (countWins == 3) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        System.out.println("Congratulations, " + userName + "!");
+
     }
 }
