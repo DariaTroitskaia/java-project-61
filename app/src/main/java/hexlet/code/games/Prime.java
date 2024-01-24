@@ -8,26 +8,31 @@ public class Prime {
 
         String[][] gameArray = new String[3][2];
         for (int i = 0; i < gameArray.length; i++) {
-            boolean isPrime = true;
-            int number = (int) (1 + Math.random() * 100);
-            gameArray[i][0] = String.valueOf(number);
-
-            if (number < 2) {
-                isPrime = false;
-            }
-            for (int j = 2; j <= Math.sqrt(number); j++) {
-                if (number % j == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-
-            if (isPrime) {
-                gameArray[i][1] = "yes";
-            } else {
-                gameArray[i][1] = "no";
-            }
+            gameArray[i] = generateRoundData();
         }
         Engine.getGame(rules, gameArray);
+    }
+
+    public static String[] generateRoundData(){
+        int number = (int) (1 + Math.random() * 100);
+        String[] roundData = new String[2];
+        roundData[0] = String.valueOf(number);
+        roundData[1] = correctAnswer(number);
+        return roundData;
+    }
+
+    public static String correctAnswer(int number){
+        boolean isPrime = number >= 2;
+        for (int j = 2; j <= Math.sqrt(number); j++) {
+            if (number % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            return "yes";
+        } else {
+            return "no";
+        }
     }
 }
