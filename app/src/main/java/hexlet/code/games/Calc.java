@@ -18,7 +18,7 @@ public class Calc {
 
         char[] operators = new char[] {'+', '-', '*'};
         String[] roundData = new String[2];
-        roundData[0] = String.valueOf(number1) + operators[index] + number2;
+        roundData[0] = number1 + " " + operators[index] + " " + number2;
         roundData[1] = calculation(number1, number2, operators[index]);
         return roundData;
     }
