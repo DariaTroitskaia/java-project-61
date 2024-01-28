@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 public class Progression {
     public static void getGame() {
         var rules = "What number is missing in the progression?\n";
-        String[][] gameArray = new String[Engine.countRounds][2];
+        String[][] gameArray = new String[Engine.COUNTROUNDS][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
@@ -15,9 +15,9 @@ public class Progression {
         int sizeOfProgression = 10;
         String[] progression = new String[sizeOfProgression];
 
-        progression[0] = String.valueOf(Utils.GETRANDOM(1, 100));
-        int a = Utils.GETRANDOM(1, 10);
-        int index = Utils.GETRANDOM(1, 9);
+        progression[0] = String.valueOf(Utils.getRandom(1, 100));
+        int a = Utils.getRandom(1, 10);
+        int index = Utils.getRandom(1, 9);
 
         String progressionToString = progression[0];
         for (int j = 1; j < sizeOfProgression; j++) {
@@ -37,3 +37,5 @@ public class Progression {
         return String.valueOf(number + a * index);
     }
 }
+
+

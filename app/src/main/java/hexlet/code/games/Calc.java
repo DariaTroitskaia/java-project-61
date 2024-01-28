@@ -6,16 +6,16 @@ public class Calc {
     public static void getGame() {
         var rules = "What is the result of the expression?";
 
-        String[][] gameArray = new String[Engine.countRounds][2];
+        String[][] gameArray = new String[Engine.COUNTROUNDS][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
         Engine.getGame(rules, gameArray);
     }
     public static String[] generateRoundData() {
-        int number1 = Utils.GETRANDOM(1, 20);
-        int number2 = Utils.GETRANDOM(1, 20);
-        int index = Utils.GETRANDOM(0, 3);
+        int number1 = Utils.getRandom(1, 20);
+        int number2 = Utils.getRandom(1, 20);
+        int index = Utils.getRandom(0, 3);
 
         char[] operators = new char[] {'+', '-', '*'};
         String[] roundData = new String[2];
