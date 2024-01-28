@@ -15,9 +15,9 @@ public class Progression {
         int sizeOfProgression = 10;
         String[] progression = new String[sizeOfProgression];
 
-        progression[0] = String.valueOf(Utils.getRandom(1, 100));
-        int a = Utils.getRandom(1, 10);
-        int index = Utils.getRandom(1, 9);
+        progression[0] = String.valueOf(Utils.GETRANDOM(1, 100));
+        int a = Utils.GETRANDOM(1, 10);
+        int index = Utils.GETRANDOM(1, 9);
 
         String progressionToString = progression[0];
         for (int j = 1; j < sizeOfProgression; j++) {

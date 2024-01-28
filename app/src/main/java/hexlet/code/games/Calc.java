@@ -13,9 +13,9 @@ public class Calc {
         Engine.getGame(rules, gameArray);
     }
     public static String[] generateRoundData() {
-        int number1 = Utils.getRandom(1, 20);
-        int number2 = Utils.getRandom(1, 20);
-        int index = Utils.getRandom(0, 3);
+        int number1 = Utils.GETRANDOM(1, 20);
+        int number2 = Utils.GETRANDOM(1, 20);
+        int index = Utils.GETRANDOM(0, 3);
 
         char[] operators = new char[] {'+', '-', '*'};
         String[] roundData = new String[2];

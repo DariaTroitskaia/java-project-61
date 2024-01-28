@@ -12,7 +12,7 @@ public class Even {
        Engine.getGame(rules, gameArray);
     }
     public static String[] generateRoundData() {
-        int number = Utils.getRandom(1, 100);
+        int number = Utils.GETRANDOM(1, 100);
         String[] roundData = new String[2];
         roundData[0] = String.valueOf(number);
         roundData[1] = isEven(number);
