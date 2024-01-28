@@ -4,10 +4,7 @@ import java.util.Scanner;
 public class Engine {
     public static final int COUNTROUNDS = 3;
     public static void getGame(String rules, String[][] gameArray) {
-        System.out.println("Welcome to the Brain Games!\n"
-                + "May I have your name?");
         var userName = Cli.getName();
-        System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
 
         for (String[] correctAnswer:gameArray) {
