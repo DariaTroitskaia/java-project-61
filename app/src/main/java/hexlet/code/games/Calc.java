@@ -1,21 +1,21 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     public static void getGame() {
         var rules = "What is the result of the expression?";
-        int countRounds = 3;
-        String[][] gameArray = new String[countRounds][2];
+
+        String[][] gameArray = new String[Engine.countRounds][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
         Engine.getGame(rules, gameArray);
     }
     public static String[] generateRoundData() {
-        int maxRandom = 20;
-        int number1 = (int) (1 + Math.random() * maxRandom);
-        int number2 = (int) (1 + Math.random() * maxRandom);
-        int index = (int) (Math.random() * 2);
+        int number1 = Utils.getRandom(1, 20);
+        int number2 = Utils.getRandom(1, 20);
+        int index = Utils.getRandom(0, 3);
 
         char[] operators = new char[] {'+', '-', '*'};
         String[] roundData = new String[2];

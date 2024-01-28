@@ -18,27 +18,27 @@ public class App {
                 + "6 - Prime\n"
                 + "0 - Exit");
         Scanner in = new Scanner(System.in);
-        var usersChoice = in.nextInt();
+        var usersChoice = in.nextLine();
         var messageChoice = "Your choice: " + usersChoice;
         System.out.println(messageChoice);
 
         switch (usersChoice) {
-            case 1:
+            case "1":
                 Greet.sayHello();
                 break;
-            case 2:
+            case "2":
                 Even.getGame();
                 break;
-            case 3:
+            case "3":
                 Calc.getGame();
                 break;
-            case 4:
+            case "4":
                 GCD.getGame();
                 break;
-            case 5:
+            case "5":
                 Progression.getGame();
                 break;
-            case 6:
+            case "6":
                 Prime.getGame();
                 break;
             default:
