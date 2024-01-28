@@ -20,11 +20,15 @@ public class Progression {
         String[] progression = getProgression(firstNumber, step, size);
 
         String progressionToString = "";
-        for (int i = 1; i < size; i++) {
+        for (int i = 0; i < size; i++) {
+            var number = progression[i];
             if (i == index) {
-                progressionToString = progressionToString + " " + "..";
+                number = "..";
+            }
+            if (progressionToString.isEmpty()) {
+                progressionToString = progressionToString + number;
             } else {
-                progressionToString = progressionToString + " " + progression[i];
+                progressionToString = progressionToString + " " + number;
             }
         }
         String[] roundData = new String[2];
