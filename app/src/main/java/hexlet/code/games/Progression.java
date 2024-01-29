@@ -3,7 +3,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static final String RULES = "What number is missing in the progression?\n";
+    public static final String RULES = "What number is missing in the progression?";
     private static final int SIZE = 10;
     private static final int MAX_RANDOM_FOR_STEP = 10;
     private static final int MAX_RANDOM_FOR_INDEX = 9;
