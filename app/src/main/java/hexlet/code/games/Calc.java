@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 public class Calc {
     public static final String RULES = "What is the result of the expression?";
     private static final char[] OPERATORS = new char[] {'+', '-', '*'};
-    private static final int maxRandom = 20;
+    private static final int MAX_RANDOM = 20;
     public static void getGame() {
         String[][] gameArray = new String[Engine.ROUNDS_COUNT][2];
         for (int i = 0; i < gameArray.length; i++) {
@@ -14,8 +14,8 @@ public class Calc {
         Engine.run(RULES, gameArray);
     }
     public static String[] generateRoundData() {
-        int number1 = Utils.getRandom(1, maxRandom);
-        int number2 = Utils.getRandom(1, maxRandom);
+        int number1 = Utils.getRandom(1, MAX_RANDOM);
+        int number2 = Utils.getRandom(1, MAX_RANDOM);
         int index = Utils.getRandom(0, OPERATORS.length);
 
 
