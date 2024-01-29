@@ -2,8 +2,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int COUNTROUNDS = 3;
-    public static void getGame(String rules, String[][] gameArray) {
+    public static final int ROUNDS_COUNT = 3;
+    public static void run(String rules, String[][] gameArray) {
         var userName = Cli.getName();
         System.out.println(rules);
 

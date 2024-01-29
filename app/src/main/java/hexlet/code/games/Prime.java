@@ -6,14 +6,14 @@ import hexlet.code.Utils;
 public class Prime {
     public static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";
     public static void getGame() {
-        String[][] gameArray = new String[Engine.COUNTROUNDS][2];
+        String[][] gameArray = new String[Engine.ROUNDS_COUNT][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
-        Engine.getGame(RULES, gameArray);
+        Engine.run(RULES, gameArray);
     }
     public static String[] generateRoundData() {
-        int number = Utils.getRandom(1, 100);
+        int number = Utils.getRandom();
         String[] roundData = new String[2];
         roundData[0] = String.valueOf(number);
         roundData[1] = isPrime(number) ? "yes" : "no";
