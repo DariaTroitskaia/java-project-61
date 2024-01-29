@@ -19,7 +19,7 @@ public class Prime {
         roundData[1] = isPrime(number) ? "yes" : "no";
         return roundData;
     }
-    public static boolean isPrime (int number) {
+    public static boolean isPrime(int number) {
         boolean isPrime = number >= 2;
         for (int j = 2; j <= Math.sqrt(number); j++) {
             if (number % j == 0) {

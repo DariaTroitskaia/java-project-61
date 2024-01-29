@@ -4,6 +4,9 @@ import hexlet.code.Utils;
 
 public class Progression {
     public static final String RULES = "What number is missing in the progression?\n";
+    private static final int SIZE = 10;
+    private static final int MAX_RANDOM_FOR_STEP = 10;
+    private static final int MAX_RANDOM_FOR_INDEX = 9;
     public static void getGame() {
         String[][] gameArray = new String[Engine.ROUNDS_COUNT][2];
         for (int i = 0; i < gameArray.length; i++) {
@@ -12,12 +15,11 @@ public class Progression {
         Engine.run(RULES, gameArray);
     }
     public static String[] generateRoundData() {
-        int size = 10;
         int firstNumber = Utils.getRandom();
-        int step = Utils.getRandom(1, 10);
-        int index = Utils.getRandom(1, 9);
+        int step = Utils.getRandom(1, MAX_RANDOM_FOR_STEP);
+        int index = Utils.getRandom(1, MAX_RANDOM_FOR_INDEX);
 
-        String[] progression = getProgression(firstNumber, step, size);
+        String[] progression = getProgression(firstNumber, step, SIZE);
 
         var unknownNumber = progression[index];
         progression[index] = "..";
