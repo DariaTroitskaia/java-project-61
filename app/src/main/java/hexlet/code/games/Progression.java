@@ -7,19 +7,22 @@ public class Progression {
     private static final int SIZE = 10;
     private static final int MAX_RANDOM_FOR_STEP = 10;
     private static final int MAX_RANDOM_FOR_INDEX = 9;
-    public static void getGame() {
+
+    public static void startGame() {
         String[][] gameArray = new String[Engine.ROUNDS_COUNT][2];
         for (int i = 0; i < gameArray.length; i++) {
             gameArray[i] = generateRoundData();
         }
         Engine.run(RULES, gameArray);
     }
+
+
     public static String[] generateRoundData() {
         int firstNumber = Utils.getRandom();
         int step = Utils.getRandom(1, MAX_RANDOM_FOR_STEP);
         int index = Utils.getRandom(1, MAX_RANDOM_FOR_INDEX);
 
-        String[] progression = getProgression(firstNumber, step, SIZE);
+        String[] progression = generateProgression(firstNumber, step, SIZE);
 
         var unknownNumber = progression[index];
         progression[index] = "..";
@@ -30,7 +33,9 @@ public class Progression {
         roundData[1] = unknownNumber;
         return roundData;
     }
-    public static String[] getProgression(int firstNumber, int step, int size) {
+
+
+    public static String[] generateProgression(int firstNumber, int step, int size) {
         String[] progression = new String[size];
         progression[0] = String.valueOf(firstNumber);
         for (int i = 1; i < size; i++) {

@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int ROUNDS_COUNT = 3;
+
+
     public static void run(String rules, String[][] gameArray) {
         var userName = Cli.getName();
         System.out.println(rules);
@@ -25,6 +27,5 @@ public class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-
     }
 }
